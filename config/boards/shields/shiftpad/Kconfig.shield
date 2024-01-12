@@ -1,0 +1,2 @@
+config SHIELD_SHIFTPAD
+    def_bool $(shields_list_contains,shiftpad)

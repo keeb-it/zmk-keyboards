@@ -1,0 +1,11 @@
+file_format: "1"
+id: shiftpad
+name: shiftpad
+type: shield
+url: https://keebit.xyz/boards/shiftpad
+requires: [seeeduino_xiao_ble]
+exposes: [i2c_oled]
+features:
+  - keys
+  - encoder
+  - display
