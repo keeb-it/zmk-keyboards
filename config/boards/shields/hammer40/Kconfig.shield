@@ -1,0 +1,2 @@
+config SHIELD_HAMMER40
+    def_bool $(shields_list_contains,hammer40)

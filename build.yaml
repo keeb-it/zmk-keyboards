@@ -14,4 +14,4 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: shiftpad
+    shield: hammer40

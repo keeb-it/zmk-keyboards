@@ -1,10 +1,10 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SHIFTPAD
+if SHIELD_HAMMER40
 
 config ZMK_KEYBOARD_NAME
-    default "shiftpad"
+    default "hammer40"
 
 config SPI
     default y
