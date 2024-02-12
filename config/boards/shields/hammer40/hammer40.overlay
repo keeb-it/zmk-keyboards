@@ -29,6 +29,7 @@
         display-offset = <0>;
         multiplex-ratio = <63>;
         prechargep = <0x22>;
+        inversion-on;
     };
 };
 
