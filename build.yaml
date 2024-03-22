@@ -14,3 +14,6 @@
 ---
 board: [seeeduino_xiao, seeeduino_xiao_ble, seeeduino_xiao_rp2040]
 shield: [hammer40]
+include:
+  - board: seeeduino_xiao_ble
+    shield: hammer40 rgbled_adapter
