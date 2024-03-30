@@ -17,6 +17,14 @@ config I2C
 config SSD1306
     default y
 
+choice LV_FONT_DEFAULT
+    default LV_FONT_DEFAULT_MONTSERRAT_12
+endchoice
+
+choice ZMK_LV_FONT_DEFAULT_SMALL
+    default ZMK_LV_FONT_DEFAULT_SMALL_MONTSERRAT_12
+endchoice
+
 config LV_Z_VDB_SIZE
     default 64
 
