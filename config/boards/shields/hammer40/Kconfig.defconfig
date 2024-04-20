@@ -6,13 +6,7 @@ if SHIELD_HAMMER40
 config ZMK_KEYBOARD_NAME
     default "hammer40"
 
-config SPI
-    default y
-
 if ZMK_DISPLAY
-
-config I2C
-    default y
 
 config SSD1306
     default y
