@@ -3,9 +3,10 @@ id: hammer40
 name: hammer40
 type: shield
 url: https://github.com/keeb-it/hammer40
-requires: [seeeduino_xiao_ble]
+requires: [seeeduino_xiao_ble, seeeduino_xiao_rp2040]
 exposes: [i2c_oled]
 features:
   - keys
   - encoder
   - display
+  - pointer
