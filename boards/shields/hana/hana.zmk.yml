@@ -1,0 +1,15 @@
+file_format: "1"
+id: hana
+name: hana
+type: shield
+url: https://github.com/keeb-it/hana
+requires: [seeeduino_xiao_ble, seeeduino_xiao_rp2040]
+exposes: [i2c_oled, spi_oled]
+siblings:
+  - hana_left
+  - hana_right
+features:
+  - keys
+  - encoder
+  - display
+  - pointer

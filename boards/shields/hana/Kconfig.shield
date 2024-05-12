@@ -1,0 +1,5 @@
+config SHIELD_HANA_LEFT
+    def_bool $(shields_list_contains,hana_left)
+
+config SHIELD_HANA_RIGHT
+    def_bool $(shields_list_contains,hana_right)
