@@ -16,3 +16,7 @@
         , <&shift_reg 3 (GPIO_ACTIVE_HIGH)>
         ;
 };
+
+&right_encoder {
+    status = "okay";
+};
