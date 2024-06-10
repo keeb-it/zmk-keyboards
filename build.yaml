@@ -14,7 +14,12 @@
 ---
 # board: [seeeduino_xiao, seeeduino_xiao_ble, seeeduino_xiao_rp2040]
 board: [seeeduino_xiao_ble]
-shield: [hammer40, hana_left, hana_right]
+shield:
+  - hammer40
+  - hana_central_dongle
+  - hana_central_left
+  - hana_peripheral_left
+  - hana_peripheral_right
 include:
   - board: seeeduino_xiao_ble
     shield: settings_reset

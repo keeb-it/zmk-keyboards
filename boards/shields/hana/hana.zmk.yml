@@ -6,8 +6,10 @@ url: https://github.com/keeb-it/hana
 requires: [seeeduino_xiao_ble, seeeduino_xiao_rp2040]
 exposes: [i2c_oled, spi_oled]
 siblings:
-  - hana_left
-  - hana_right
+  - hana_central_dongle
+  - hana_central_left
+  - hana_peripheral_left
+  - hana_peripheral_right
 features:
   - keys
   - encoder

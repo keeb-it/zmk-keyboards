@@ -22,7 +22,6 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        // zmk,split-uart = &uart0;
     };
 
     kscan0: kscan {
@@ -36,6 +35,9 @@
             , <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+
+        // NOTE: columns are different for both halves
+        col-gpios;
     };
 
     default_transform: default_transform {
