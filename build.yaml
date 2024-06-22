@@ -16,13 +16,16 @@
 board: [seeeduino_xiao_ble]
 shield:
   - hammer40
-  - hana_central_dongle
   - hana_central_left
   - hana_peripheral_left
   - hana_peripheral_right
 include:
   - board: seeeduino_xiao_ble
     shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
+  - board: nice_nano_v2
+    shield: hana_central_dongle
 #   - board: seeeduino_xiao_ble
 #     shield: hana_left
 #   - board: seeeduino_xiao_ble
