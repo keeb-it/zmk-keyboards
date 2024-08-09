@@ -1,10 +1,21 @@
 if SHIELD_HANA_CENTRAL_DONGLE || SHIELD_HANA_CENTRAL_LEFT
 
-config ZMK_KEYBOARD_NAME
-    default "hana"
-
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
+endif
+
+if SHIELD_HANA_CENTRAL_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "hana.dongle"
+
+endif
+
+if SHIELD_HANA_CENTRAL_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "hana.central"
 
 endif
 

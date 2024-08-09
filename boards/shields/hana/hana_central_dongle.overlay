@@ -6,7 +6,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
     };
-    
+
     mock_kscan: kscan1 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
