@@ -43,4 +43,22 @@
                             RC(0,6) RC(1,6) RC(2,6) RC(2,7)                 RC(2,8)  RC(0,9)  RC(1,9)  RC(2,9)
         >;
     };
+
+    left_encoder: left_encoder {
+        compatible = "alps,ec11";
+        steps = <80>;
+        status = "disabled";
+    };
+
+    right_encoder: right_encoder {
+        compatible = "alps,ec11";
+        steps = <80>;
+        status = "disabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
+    };
 };
