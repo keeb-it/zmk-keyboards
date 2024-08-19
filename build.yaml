@@ -40,3 +40,13 @@ include:
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: hammer40_xiao_rp2040_studio 
+  - board: seeeduino_xiao_ble
+    shield: hana_central_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: hana_left_xiao_ble_studio 
+  - board: seeeduino_xiao_ble
+    shield: hana_peripheral_right
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: hana_right_xiao_ble_studio 
