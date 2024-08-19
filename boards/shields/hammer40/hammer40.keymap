@@ -59,7 +59,7 @@
             display-name = "base";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
-                &kp GRAVE  &kp Q      &kp W      &kp E     &kp R     &kp T                   &kp Y           &kp U      &kp I      &kp O     &kp P     &kp LBKT
+                &studio_unlock  &kp Q      &kp W      &kp E     &kp R     &kp T                   &kp Y           &kp U      &kp I      &kp O     &kp P     &kp LBKT
                 &kp TAB    &kp A      &kp S      &kp D     &kp F     &kp G                   &kp H           &kp J      &kp K      &kp L     &kp SEMI  &kp APOS
                 &kp RBKT   &kp Z      &kp X      &kp C     &kp V     &kp B          &rot_td  &kp N           &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
                 &kp BSLH   &kp PSCRN  &kp LCTRL  &kp LGUI  &kp LALT  &lt NAV ENTER  &kp ESC  &lt LOWR SPACE  &kp LSHFT  &kp RCTRL  &kp BSPC  &kp DEL   &kp EQUAL
