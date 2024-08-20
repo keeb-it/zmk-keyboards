@@ -16,5 +16,25 @@
                                 &studio_unlock &kp LGUI &kp ESC &kp SPACE                  &kp RET &mo 2 &kp LALT  &trans
             >;
         };
+
+        nav_layer {
+            display-name = "nav";
+            status = "reserved";
+        };
+
+        fn_layer {
+            display-name = "fn";
+            status = "reserved";
+        };
+
+        num_layer {
+            display-name = "num";
+            status = "reserved";
+        };
+        
+        sys_layer {
+            display-name = "sys";
+            status = "reserved";
+        };
     };
 };
