@@ -1,10 +1,14 @@
 #include "acorn.dtsi"
 
-&default_transform {
+&six_col_transform {
     col-offset = <6>;
 };
 
-&default_kscan {
+&five_col_transform {
+    col-offset = <5>;
+};
+
+&kscan {
     col-gpios
         = <&pro_micro 18 (GPIO_ACTIVE_HIGH)>
         , <&pro_micro 15 (GPIO_ACTIVE_HIGH)>

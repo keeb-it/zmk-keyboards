@@ -1,6 +1,6 @@
 #include "acorn_matrix.dtsi"
 
-/delete-node/ &default_kscan;
+/delete-node/ &kscan;
 
 / {
     chosen {
