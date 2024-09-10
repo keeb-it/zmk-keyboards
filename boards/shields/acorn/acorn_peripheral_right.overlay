@@ -5,7 +5,7 @@
 };
 
 &five_col_transform {
-    col-offset = <5>;
+    col-offset = <6>;
 };
 
 &kscan {

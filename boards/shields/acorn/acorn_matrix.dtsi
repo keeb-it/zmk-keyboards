@@ -1,16 +1,27 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
+// #include <layouts/foostan/corne.dtsi>
+// 
+// &foostan_corne_6col_layout {
+//     transform = <&default_transform>;
+// };
+// 
+// &foostan_corne_5col_layout {
+//     transform = <&five_column_transform>;
+// };
+
 / {
     chosen {
+        zmk,kscan = &kscan;
         zmk,physical-layout = &six_col_layout;
+        // zmk,physical-layout = &foostan_corne_6col_layout;
     };
 
     six_col_layout: six_col_layout {
         compatible = "zmk,physical-layout";
         display-name = "6-col";
 
-        kscan = <&kscan>;
         transform = <&six_col_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
@@ -63,7 +74,6 @@
         compatible = "zmk,physical-layout";
         display-name = "5-col";
 
-        kscan = <&kscan>;
         transform = <&five_col_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
@@ -114,19 +124,19 @@
         twelve {
             physical-layout = <&six_col_layout>;
             positions
-                = < 1  2  3  4  5  6  7  8  9 10>
-                , <13 14 15 16 17 18 19 20 21 22>
-                , <25 26 27 28 29 30 31 32 33 34>
-                , <      36 37 38 39 40 41      >;
+                = < 0  1  2  3  4  5  6  7  8  9 10 11>
+                , <12 13 14 15 16 17 18 19 20 21 22 23>
+                , <24 25 26 27 28 29 30 31 32 33 34 35>
+                , <         36 37 38 39 40 41         >;
         };
 
         ten {
             physical-layout = <&five_col_layout>;
             positions
-                = < 0  1  2  3  4  5  6  7  8  9>
-                , <10 11 12 13 14 15 16 17 18 19>
-                , <20 21 22 23 24 25 26 27 28 29>
-                , <      30 31 32 33 34 35      >;
+                = <36  0  1  2  3  4  5  6  7  8  9 37>
+                , <38 10 11 12 13 14 15 16 17 18 19 39>
+                , <40 20 21 22 23 24 25 26 27 28 29 41>
+                , <         30 31 32 33 34 35         >;
         };
     };
 
@@ -143,7 +153,7 @@
             , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
-        // NOTE: Below are LHS columns, RHS columns are different
+        // NOTE: Below are LHS columns, RHS columns are different and re-defined in their respective .overlay files
         col-gpios
             = <&pro_micro 21 (GPIO_ACTIVE_HIGH)>
             , <&pro_micro 4 (GPIO_ACTIVE_HIGH)>
