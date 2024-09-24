@@ -3,37 +3,77 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_studio_unlock {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&studio_unlock>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "base";
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             bindings = <
-                &kp TAB   &kp Q &kp W  &kp E    &kp R   &kp T         &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A &kp S  &kp D    &kp F   &kp G         &kp H   &kp J &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X  &kp C    &kp V   &kp B         &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &kp ESC
-                               &studio_unlock &kp ESC &kp SPACE     &kp RET &kp LALT &kp DEL
+&kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+&kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+            >;
+        };
+
+        lower_layer {
+            display-name = "lower";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+            bindings = <
+&kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+&kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+            >;
+        };
+
+        raise_layer {
+            display-name = "raise";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+            bindings = <
+&kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+&kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+&kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                          &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
             >;
         };
         
-        nav_layer {
-            display-name = "nav";
+        extra_layer0 {
+            display-name = "extra_layer0";
             status = "reserved";
         };
 
-        fn_layer {
-            display-name = "fn";
+        extra_layer1 {
+            display-name = "extra_layer1";
             status = "reserved";
         };
 
-        num_layer {
-            display-name = "num";
-            status = "reserved";
-        };
-        
-        sys_layer {
-            display-name = "sys";
+        extra_layer2 {
+            display-name = "extra_layer2";
             status = "reserved";
         };
     };
