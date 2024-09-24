@@ -20,48 +20,37 @@
 #   - hana_peripheral_left
 #   - hana_peripheral_right
 include:
-  # - board: seeeduino_xiao_ble
-  #   shield: settings_reset
-  # - board: nice_nano_v2
-  #   shield: settings_reset
-  # - board: nice_nano_v2
-  #   shield: hana_central_dongle
-  # - board: nice_nano_v2
-  #   shield: acorn_central_left
-  # - board: nice_nano_v2
-  #   shield: acorn_peripheral_right
-  # - board: seeeduino_xiao_ble
-  #   shield: hammer40
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: hammer40_xiao_ble_studio
-  # - board: seeeduino_xiao_rp2040
-  #   shield: hammer40
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: hammer40_xiao_rp2040_studio
-  # - board: seeeduino_xiao_ble
-  #   shield: hana_central_left
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: hana_left_xiao_ble_studio
-  # - board: seeeduino_xiao_ble
-  #   shield: hana_peripheral_right
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: hana_right_xiao_ble_studio
-  # - board: nice_nano_v2
-  #   shield: acorn_central_left
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: acorn_left_nice_nano_studio
-  # - board: nice_nano_v2
-  #   shield: acorn_peripheral_right
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: acorn_right_nice_nano_studio
-  - board: sparkfun_pro_micro_rp2040
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
+    # Hammer
+  - board: seeeduino_xiao_ble
+    shield: hammer40
+    snippet: studio-rpc-usb-uart
+    # Hana
+  - board: nice_nano_v2
+    shield: hana_central_dongle
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: hana_peripheral_left
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: hana_central_left
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: hana_peripheral_right
+    snippet: studio-rpc-usb-uart
+    # Corne Wireless
+  - board: nice_nano_v2
+    shield: acorn_central_dongle
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano_v2
+    shield: acorn_peripheral_left
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano_v2
     shield: acorn_central_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: acorn_left_rp2040_studio
+  - board: nice_nano_v2
+    shield: acorn_peripheral_right
+    snippet: studio-rpc-usb-uart
