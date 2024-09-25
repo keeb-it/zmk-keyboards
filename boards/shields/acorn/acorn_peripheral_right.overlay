@@ -1,10 +1,14 @@
 #include "acorn.dtsi"
 
-&default_transform {
+&six_col_transform {
     col-offset = <6>;
 };
 
-&kscan0 {
+&five_col_transform {
+    col-offset = <6>;
+};
+
+&kscan {
     col-gpios
         = <&pro_micro 18 (GPIO_ACTIVE_HIGH)>
         , <&pro_micro 15 (GPIO_ACTIVE_HIGH)>
@@ -18,6 +22,6 @@
 
 &right_encoder {
     status = "okay";
-    a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };

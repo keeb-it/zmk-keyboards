@@ -1,12 +1,69 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,kscan = &kscan;
+        zmk,physical-layout = &default_layout;
     };
 
-    kscan0: kscan {
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default";
+
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0   37       0     0     0>
+            , <&key_physical_attrs 100 100   99   37       0     0     0>
+            , <&key_physical_attrs 100 100  200   12       0     0     0>
+            , <&key_physical_attrs 100 100  300    0       0     0     0>
+            , <&key_physical_attrs 100 100  400   12       0     0     0>
+            , <&key_physical_attrs 100 100  500   25       0     0     0>
+            , <&key_physical_attrs 100 100 1100   25       0     0     0>
+            , <&key_physical_attrs 100 100 1200   12       0     0     0>
+            , <&key_physical_attrs 100 100 1300    0       0     0     0>
+            , <&key_physical_attrs 100 100 1399   12       0     0     0>
+            , <&key_physical_attrs 100 100 1500   37       0     0     0>
+            , <&key_physical_attrs 100 100 1600   37       0     0     0>
+            , <&key_physical_attrs 100 100    0  137       0     0     0>
+            , <&key_physical_attrs 100 100   99  137       0     0     0>
+            , <&key_physical_attrs 100 100  200  112       0     0     0>
+            , <&key_physical_attrs 100 100  300  100       0     0     0>
+            , <&key_physical_attrs 100 100  400  112       0     0     0>
+            , <&key_physical_attrs 100 100  500  125       0     0     0>
+            , <&key_physical_attrs 100 100 1100  125       0     0     0>
+            , <&key_physical_attrs 100 100 1200  112       0     0     0>
+            , <&key_physical_attrs 100 100 1300  100       0     0     0>
+            , <&key_physical_attrs 100 100 1399  112       0     0     0>
+            , <&key_physical_attrs 100 100 1500  137       0     0     0>
+            , <&key_physical_attrs 100 100 1600  137       0     0     0>
+            , <&key_physical_attrs 100 100    0  237       0     0     0>
+            , <&key_physical_attrs 100 100   99  237       0     0     0>
+            , <&key_physical_attrs 100 100  200  212       0     0     0>
+            , <&key_physical_attrs 100 100  300  200       0     0     0>
+            , <&key_physical_attrs 100 100  400  212       0     0     0>
+            , <&key_physical_attrs 100 100  500  225       0     0     0>
+            , <&key_physical_attrs 100 100  675  200       0     0     0>
+            , <&key_physical_attrs 100 100  925  200       0     0     0>
+            , <&key_physical_attrs 100 100 1100  225       0     0     0>
+            , <&key_physical_attrs 100 100 1200  212       0     0     0>
+            , <&key_physical_attrs 100 100 1299  200       0     0     0>
+            , <&key_physical_attrs 100 100 1399  212       0     0     0>
+            , <&key_physical_attrs 100 100 1500  237       0     0     0>
+            , <&key_physical_attrs 100 100 1600  237       0     0     0>
+            , <&key_physical_attrs 100 100  254  312       0     0     0>
+            , <&key_physical_attrs 100 100  360  319     760   410   369>
+            , <&key_physical_attrs 100 100  464  340    1520   514   390>
+            , <&key_physical_attrs 150 100  550  353 (-6625)   625   403>
+            , <&key_physical_attrs 150 100  999  353    6625  1074   403>
+            , <&key_physical_attrs 100 100 1135  340 (-1520)  1185   390>
+            , <&key_physical_attrs 100 100 1239  319  (-760)  1289   369>
+            , <&key_physical_attrs 100 100 1345  312       0     0     0>
+            ;
+    };
+
+    kscan: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
 
@@ -29,7 +86,6 @@
             , <&shift_reg 7 (GPIO_ACTIVE_HIGH)>
             , <&shift_reg 1 (GPIO_ACTIVE_HIGH)>
             ;
-
     };
 
     default_transform: default_transform {

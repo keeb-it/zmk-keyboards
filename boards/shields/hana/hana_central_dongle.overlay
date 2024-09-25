@@ -1,6 +1,6 @@
 #include "hana_matrix.dtsi"
 
-/delete-node/ &kscan0;
+/delete-node/ &kscan;
 
 / {
     chosen {

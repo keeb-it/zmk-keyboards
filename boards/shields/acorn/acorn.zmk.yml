@@ -3,7 +3,7 @@ id: acorn
 name: acorn
 type: shield
 url: https://github.com/keeb-it/acorn
-requires: [seeeduino_xiao_ble, seeeduino_xiao_rp2040]
+requires: [nice_nano_v2]
 exposes: [i2c_oled, spi_oled]
 siblings:
   - acorn_central_dongle
@@ -14,4 +14,3 @@ features:
   - keys
   - encoder
   - display
-  - pointer

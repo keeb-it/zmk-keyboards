@@ -18,6 +18,12 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_studio_unlock {
+            timeout-ms = <50>;
+            key-positions = <0 11>;
+            bindings = <&studio_unlock>;
+        };
+
         combo_capsw {
             timeout-ms = <50>;
             key-positions = <16 19>;
@@ -85,6 +91,21 @@
                 &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans    &trans     &trans     &trans     &trans  &trans
                 &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans    &trans     &trans     &trans     &trans  &trans
             >;
+        };
+
+        fn_layer {
+            display-name = "fn";
+            status = "reserved";
+        };
+
+        num_layer {
+            display-name = "num";
+            status = "reserved";
+        };
+        
+        sys_layer {
+            display-name = "sys";
+            status = "reserved";
         };
     };
 };
