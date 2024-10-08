@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <physical_layouts.dtsi>
-#include <layouts/foostan/corne.dtsi>
+
+#include <layouts/foostan/corne/5column.dtsi>
+#include <layouts/foostan/corne/6column.dtsi>
 
 &foostan_corne_6col_layout {
     transform = <&six_col_transform>;
@@ -51,7 +52,7 @@
                                     RC(3,3) RC(3,4) RC(3,5)   RC(3,6) RC(3,7) RC(3,8)
         >;
     };
-    
+
     five_col_transform: five_col_transform {
         compatible = "zmk,matrix-transform";
         columns = <10>;
