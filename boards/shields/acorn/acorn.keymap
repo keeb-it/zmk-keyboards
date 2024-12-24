@@ -26,7 +26,7 @@
 #define U_WH_R &msc SCRL_RIGHT
 
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define BT(profile) &bt_select profile
+#define BT(profile) &bt BT_SEL profile
 
 / {
 
@@ -77,11 +77,11 @@
             bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
         };
 
-        td_copy: tap_dance {
-            label = "double_tap_copy";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp LC(C)>;
-        };
+        // td_copy: tap_dance {
+        //     label = "double_tap_copy";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp C>, <&kp LC(C)>;
+        // };
     };
 
     keymap {
