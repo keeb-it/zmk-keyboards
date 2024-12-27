@@ -114,7 +114,7 @@
 &trans      &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                         &kp CARET       &kp AMPS      &kp ASTRK   &kp LPAR    &kp RPAR    &trans 
 &caps_word  &kp N6       &kp N7       &kp N8       &kp N9       &kp N0                            &kp MINUS       &kp EQUAL     &kp LBKT    &kp RBKT    &kp BSLH    &kp TILDE
 &trans      &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                            &kp UNDER       &kp PLUS      &kp LBRC    &kp RBRC    &kp PIPE    &trans
-                                      &trans       &trans       &trans                            &trans          &to 0         &trans
+                                      &trans       &trans       &kp SPACE                         &trans          &to 0         &trans
             >;
         };
 
@@ -129,7 +129,7 @@
 &trans          &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                          &kp F11        &none            &kp UP       &none        &none                  &trans 
 &mt LSHFT CAPS  &kp F6       &kp F7       &kp F8       &kp F9       &kp F10                         &kp F12        &kp LEFT         &kp DOWN     &kp RIGHT    &kp C_AC_SCROLL_UP     &kp PG_UP
 &trans          &none        &none        &none        &none        &none                           &to ble        &to media        &to mouse    &none        &kp C_AC_SCROLL_DOWN   &kp PG_DN
-                                          &trans       &trans       &kp SPACE                       &trans         &to 0            &trans
+                                          &trans       &trans       &trans                          &trans         &to 0            &trans
             >;
         };
 
@@ -139,7 +139,7 @@
 &none   &none   &kp C_PREV         &kp C_MUTE        &kp C_NEXT       &none                         &none     &none           &none             &none         &kp K_SLEEP   &kp C_SLEEP
 &none   &none   &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &kp C_VOLUME_UP  &none                         &none     &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp K_LOCK
 &none   &none   &kp C_BRI_UP       &kp C_BRI_AUTO    &kp C_BRI_DN     &none                         &none     &none           &none             &none         &none         &none
-                                   &kp LGUI          &to 0            &kp SPACE                     &trans    &to 0           &trans
+                                   &kp LGUI          &to 0            &trans                        &trans    &to 0           &trans
             >;
         };
 
@@ -149,17 +149,17 @@
 &none   BT(0)   BT(1)           BT(2)             BT(3)            &none                            &none     &none           &none             &none         &none      &bt BT_CLR
 &none   &none   &none           &none             &none            &none                            &none     &none           &none             &none         &none      &none
 &none   &none   &none           &none             &none            &none                            &none     &none           &none             &none         &none      &none
-                                &kp LGUI          &to 0            &kp SPACE                        &trans    &to 0           &kp LALT
+                                &kp LGUI          &to 0            &trans                           &trans    &to 0           &kp LALT
             >;
         };
 
         mouse {
             display-name = "mouse";
             bindings = <
-&trans      &none       &none        U_BTN3       U_BTN2           U_BTN1                           &none      U_WH_L         U_MS_U          U_WH_R      &none       &none
-&caps_word  &none       &none        &none        &none            &none                            &none      U_MS_L         U_MS_D          U_MS_R      U_WH_U      &kp PG_UP
-&trans      &none       &none        &none        &none            &none                            &none      &none          &none           &none       U_WH_D      &kp PG_DN
-                                     &kp LGUI     &to 0            &kp SPACE                        &trans     &to 0          &kp LALT
+&trans      &none       &none        &none        U_WH_U           &none                            &none      U_BTN1         U_MS_U          U_BTN2      U_BTN3     &none
+&caps_word  &none       &none        U_WH_L       U_WH_D           U_WH_R                           &none      U_MS_L         U_MS_D          U_MS_R      &none      &none
+&trans      &none       &none        &none        &none            &none                            &none      &none          &none           &none       &none      &none
+                                     &kp LGUI     &to 0            &trans                           &trans     &to 0          &kp LALT
             >;
         };
     };
