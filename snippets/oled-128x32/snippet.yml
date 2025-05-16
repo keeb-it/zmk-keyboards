@@ -1,0 +1,4 @@
+name: oled-128x32
+append:
+  EXTRA_DTC_OVERLAY_FILE: oled-128x32.overlay
+  EXTRA_CONF_FILE: oled-128x32.conf

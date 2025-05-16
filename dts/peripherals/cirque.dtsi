@@ -1,0 +1,69 @@
+// 1. Enable mouse-keys and cirque trackpad
+//
+// CONFIG_ZMK_POINTING=y
+// CONFIG_INPUT=y // IDK whether this is required or not
+// CONFIG_INPUT_PINNACLE=y
+//
+// 2. Import the config on the central and add the following
+//
+// #include <peripherals/cirque.dtsi>
+//
+// &glidepoint_listener {
+//     status = "okay"
+// }
+//
+// 2a. Leave the following, if cirque is not on the central
+//
+// &cirque_trackpad {
+//     status = "okay";
+//     dr-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH)>;
+// }
+//
+// 3. if using split, then configure the split input
+//
+// #include <peripherals/cirque.dtsi>
+//
+// &cirque_trackpad {
+//     status = "okay";
+//     dr-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH)>;
+// }
+//
+// &cirque_split {
+//     device = <&cirque_trackpad>
+// }
+
+#include <dt-bindings/zmk/input_transform.h>
+
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        cirque_split: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        };
+    };
+
+    glidepoint_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&cirque_trackpad>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    };
+};
+
+&i2c0 {
+    status = "okay";
+
+    cirque_trackpad: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "disabled";
+        // dr-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "4x";
+        sleep;
+        no-taps;
+    };
+};
