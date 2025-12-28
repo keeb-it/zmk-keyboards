@@ -19,6 +19,10 @@
 
 &xiao_i2c { status = "okay"; };
 
+&uicr {
+    nfct-pins-as-gpios;
+};
+
 / {
     chosen {
         zmk,physical-layout = &default_layout;
