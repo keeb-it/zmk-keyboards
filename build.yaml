@@ -58,6 +58,6 @@ include:
   - board: rp2040_zero
     shield: coral_left
     snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: rp2040_zero
     shield: coral_right
-    snippet: studio-rpc-usb-uart

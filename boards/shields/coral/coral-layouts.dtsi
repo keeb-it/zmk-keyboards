@@ -5,6 +5,7 @@
         compatible = "zmk,physical-layout";
         display-name = "Default";
 
+        // NOTE: keys always reflects similary to how you layout your rows and colums
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   38       0     0     0>
             , <&key_physical_attrs 100 100  100   38       0     0     0>
@@ -48,6 +49,8 @@
             , <&key_physical_attrs 100 100  300  300       0     0     0>
             , <&key_physical_attrs 100 100  400  312       0     0     0>
             , <&key_physical_attrs 100 100  500  325       0     0     0>
+            , <&key_physical_attrs 100 100  625  225       0     0     0>
+            , <&key_physical_attrs 100 100  825  225       0     0     0>
             , <&key_physical_attrs 100 100  950  325       0     0     0>
             , <&key_physical_attrs 100 100 1050  312       0     0     0>
             , <&key_physical_attrs 100 100 1150  300       0     0     0>
@@ -58,8 +61,6 @@
             , <&key_physical_attrs 100 100  360  420     760   410   470>
             , <&key_physical_attrs 100 100  465  441    1520   515   491>
             , <&key_physical_attrs 150 100  551  453 (-6625)   626   504>
-            , <&key_physical_attrs 100 100  625  225       0     0     0>
-            , <&key_physical_attrs 100 100  825  225       0     0     0>
             , <&key_physical_attrs 150 100  849  453    6625   924   504>
             , <&key_physical_attrs 100 100  985  441 (-1520)  1035   491>
             , <&key_physical_attrs 100 100 1090  420  (-760)  1140   470>
