@@ -41,7 +41,7 @@ include:
   - board: xiao_ble
     shield: hana_peripheral_right
     snippet: studio-rpc-usb-uart
-    # Corne Wireless
+    # Acorn (Corne v3.1 Wireless Mod)
   - board: nice_nano
     shield: acorn_central_dongle
     snippet: studio-rpc-usb-uart
@@ -53,4 +53,11 @@ include:
     snippet: studio-rpc-usb-uart
   - board: nice_nano
     shield: acorn_peripheral_right
+    snippet: studio-rpc-usb-uart
+    # Coral v1 (Wired w/ RP-Zero)
+  - board: rp2040_zero
+    shield: coral_left
+    snippet: studio-rpc-usb-uart
+  - board: rp2040_zero
+    shield: coral_right
     snippet: studio-rpc-usb-uart

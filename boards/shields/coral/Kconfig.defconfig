@@ -1,0 +1,26 @@
+if SHIELD_CORAL_LEFT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_KEYBOARD_NAME
+    default "coral.central"
+
+endif
+
+if SHIELD_CORAL_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "coral.right"
+
+endif
+
+if SHIELD_CORAL_LEFT || SHIELD_CORAL_RIGHT
+
+config ZMK_SPLIT_WIRED
+    default y
+
+config ZMK_SPLIT
+    default y
+
+endif
