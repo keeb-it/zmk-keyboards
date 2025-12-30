@@ -1,0 +1,13 @@
+file_format: "1"
+id: coral
+name: coral
+type: shield
+url: https://github.com/keeb-it/coral
+requires: [rp2040_zero]
+exposes: []
+siblings:
+  - coral_left
+  - coral_right
+features:
+  - keys
+  - encoder

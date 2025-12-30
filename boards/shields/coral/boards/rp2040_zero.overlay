@@ -1,0 +1,19 @@
+#include <dt-bindings/pinctrl/rpi-pico-rp2040-pinctrl.h>
+
+&pinctrl {
+    uart0_default: uart0_default {
+        group1 {
+            pinmux = <UART0_TX_P12>;        // TX on GPIO12
+        };
+        group2 {
+            pinmux = <UART0_RX_P13>;        // RX on GPIO13
+            input-enable;
+        };
+    };
+};
+
+&uart0 {
+    status = "okay";
+    pinctrl-0 = <&uart0_default>;
+    pinctrl-names = "default";
+};

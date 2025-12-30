@@ -1,0 +1,23 @@
+#include "coral.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&gpio0 5 (GPIO_ACTIVE_HIGH)>
+        , <&gpio0 15 (GPIO_ACTIVE_HIGH)>
+        , <&gpio0 26 (GPIO_ACTIVE_HIGH)>
+        , <&gpio0 27 (GPIO_ACTIVE_HIGH)>
+        , <&gpio0 0 (GPIO_ACTIVE_HIGH)>
+        , <&gpio0 1 (GPIO_ACTIVE_HIGH)>
+        ;
+        
+};
+
+&right_encoder {
+    status = "okay";
+    a-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+};
