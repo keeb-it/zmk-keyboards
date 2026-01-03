@@ -29,8 +29,8 @@ config ZMK_USB_LOGGING
 config EC11
     default y
     
-config EC11_TRIGGER_GLOBAL_THREAD
-    default y
+config EC11_TRIGGER_MODE
+    default EC11_TRIGGER_GLOBAL_THREAD
 
 config ZMK_SLEEP
     default y
