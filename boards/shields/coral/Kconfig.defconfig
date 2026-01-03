@@ -31,6 +31,7 @@ config EC11
     
 choice EC11_TRIGGER_MODE
     default EC11_TRIGGER_GLOBAL_THREAD
+    depends on EC11
 endchoice
 
 config ZMK_SLEEP
