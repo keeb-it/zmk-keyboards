@@ -23,4 +23,12 @@ config ZMK_SPLIT_WIRED
 config ZMK_SPLIT
     default y
 
+config EC11
+    default y
+    
+choice EC11_TRIGGER_MODE
+    default EC11_TRIGGER_GLOBAL_THREAD
+    depends on EC11
+endchoice
+
 endif
