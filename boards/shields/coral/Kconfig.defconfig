@@ -23,9 +23,6 @@ config ZMK_SPLIT_WIRED
 config ZMK_SPLIT
     default y
 
-config ZMK_USB_LOGGING
-    default n
-
 config EC11
     default y
     
