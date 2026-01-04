@@ -34,7 +34,4 @@ choice EC11_TRIGGER_MODE
     depends on EC11
 endchoice
 
-config ZMK_SLEEP
-    default y
-
 endif

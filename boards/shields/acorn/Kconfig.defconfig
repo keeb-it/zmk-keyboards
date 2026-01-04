@@ -37,5 +37,19 @@ if SHIELD_ACORN_CENTRAL_DONGLE || SHIELD_ACORN_CENTRAL_LEFT || SHIELD_ACORN_PERI
 
 config ZMK_SPLIT
     default y
+    
+config EC11
+    default y
+
+choice EC11_TRIGGER_MODE
+    default EC11_TRIGGER_GLOBAL_THREAD
+    depends on EC11
+endchoice
+
+config ZMK_USB_LOGGING
+    default n
+
+config ZMK_SLEEP
+    default y
 
 endif
