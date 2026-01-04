@@ -30,6 +30,7 @@ include:
   - board: xiao_ble
     shield: hammer40
     snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     # Hana
   - board: nice_nano
     shield: hana_central_dongle

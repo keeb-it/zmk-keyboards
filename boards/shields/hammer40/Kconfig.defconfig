@@ -12,6 +12,20 @@ config SPI
 config I2C
     default y
 
+config EC11
+    default y
+
+choice EC11_TRIGGER_MODE
+    default EC11_TRIGGER_GLOBAL_THREAD
+    depends on EC11
+endchoice
+
+config ZMK_USB_LOGGING
+    default n
+
+config ZMK_SLEEP
+    default y
+
 if ZMK_DISPLAY
 
 config SSD1306
